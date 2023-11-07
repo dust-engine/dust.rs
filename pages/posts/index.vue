@@ -11,10 +11,7 @@
 
 <script lang="ts" setup>
   import { setResponseHeader } from 'h3'
-  const { data: list, error: listError } = await useAsyncData(
-    'posts',
-    () => $fetch(`/api/posts`),
-  )
+  const { data: list, error: listError } = await await useFetch(`/api/posts`)
   if (listError.value) {
     throw createError(listError.value)
   }

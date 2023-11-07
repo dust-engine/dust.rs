@@ -22,19 +22,12 @@ UContainer
 
   const route = useRoute();
 
-  const { data: page, error: pageError } = await useAsyncData(
-    'post:'+route.params.id,
-    () => $fetch(`/api/posts/${route.params.id}`),
-    { watch: [route] }
-  )
+  const { data: page, error: pageError } = await useFetch(`/api/posts/${route.params.id}`)
 
   if (pageError.value && pageError.value.statusCode !== 404) {
     throw createError(pageError.value)
   }
-  const { data: list, error: listError } = await useAsyncData(
-    'posts',
-    () => $fetch(`/api/posts`),
-  )
+  const { data: list, error: listError } = await useFetch(`/api/posts`)
   if (listError.value) {
     throw createError(listError.value)
   }

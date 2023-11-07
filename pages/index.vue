@@ -1,7 +1,10 @@
 <template lang="pug">
 ULandingHero(:links="links")
   template(#title) Dream Your World With Blocks
-  template(#description) Dust Engine is a research project trying to push the boundaries of geometry and interactivity.
+  template(#description)
+    | A research project trying to push the boundaries of  #[strong voxel] geometry and interactivity.
+    br
+    | Experimental real-time global illumination renderer powered by Rust, Vulkan and Bevy.
 ULandingSection(title="What We Have Now")
   ULandingGrid
     ULandingCard.col-span-8.row-span-5(
@@ -16,7 +19,7 @@ ULandingSection(title="What We Have Now")
         icon="bi:gpu-card")
     ULandingCard.col-span-6.row-span-5(
         title="Volumetric Data Structure"
-        description="A framework to easily create ray tracing pipelines."
+        description="Spatial Database inspired by OpenVDB, tailored for hardware ray tracing."
         icon="@dust:fa6-pro-regular:cube")
       .flex.justify-end
         UButton(to="/posts/13") Learn More
@@ -38,7 +41,7 @@ ULandingSection(title="Projects Under our Care")
     UPageCard(
         to="https://github.com/dust-engine/dot_vox"
         title="dot_vox"
-        description="A framework to easily create ray tracing pipelines.")
+        description="Rust parser for MagicaVoxel .vox files.")
       template(#icon)
         img.icon.w-8.h-8.flex-shrink-0(src="https://raw.githubusercontent.com/ephtracy/ephtracy.github.io/55281356d9234a005309c5ab92ff899c67ccd759/favicon.png")
     UPageCard(

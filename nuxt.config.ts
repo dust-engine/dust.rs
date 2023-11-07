@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['@nuxt/ui-pro'],
+  typescript: { strict: false },
   css: ['~/assets/global.css'],
   modules: [
     '@nuxt/content',

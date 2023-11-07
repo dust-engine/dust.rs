@@ -9,9 +9,10 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.9.0",
-    "@nuxt/ui-pro": "Neo-Zhixing/ui-pro",
+    "@nuxt/ui-pro": "npm:@dust-engine/nuxt-ui-pro-edge@latest",
     "nuxt": "^3.8.1",
-    "vite-plugin-pug": "^0.3.2"
+    "vite-plugin-pug": "^0.3.2",
+    "typescript": "^5.2.2"
   },
   "pnpm": {
     "overrides": {

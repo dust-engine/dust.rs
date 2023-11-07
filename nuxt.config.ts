@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   css: ['~/assets/global.css'],
   modules: [
     '@nuxt/content',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxtjs/web-vitals',
   ],
   content: {
     highlight: {

@@ -4,7 +4,7 @@ UHeader
     Icon(name="@dust:fa6-pro-duotone:block-question").header-icon
     | Dust Engine
   template(#right)
-    UDocsSearchButton(:label="null")
+    #UDocsSearchButton(:label="null")
     UColorModeButton
     UButton(to="https://github.com/dust-engine/dust" target="_blank" icon="@dust:fa6-pro-brands:github" color="gray" variant="ghost")
     UButton(to="https://discord.com/invite/7R26SXn8CT" target="_blank" icon="@dust:fa6-pro-brands:discord" color="gray" variant="ghost")

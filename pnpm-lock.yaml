@@ -18,7 +18,7 @@ devDependencies:
     version: 2.9.0(nuxt@3.8.1)(vue@3.3.8)
   '@nuxt/ui-pro':
     specifier: npm:@dust-engine/nuxt-ui-pro-edge@latest
-    version: /@dust-engine/nuxt-ui-pro-edge@0.4.2-28322051.92289d8(vue@3.3.8)(webpack@5.89.0)
+    version: /@dust-engine/nuxt-ui-pro-edge@0.4.2-28322130.e7a69ef(vue@3.3.8)(webpack@5.89.0)
   nuxt:
     specifier: ^3.8.1
     version: 3.8.1(typescript@5.2.2)(vite@4.5.0)
@@ -430,8 +430,8 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: true
 
-  /@dust-engine/nuxt-ui-pro-edge@0.4.2-28322051.92289d8(vue@3.3.8)(webpack@5.89.0):
-    resolution: {integrity: sha512-CnSiIaXqZALydNmnd5SMHPSSeHFB1J0AzPhoijhWz17RR+MadCztpevmH7mcTsjMXrzSFitQuYlMxVP8dWqnyQ==, tarball: https://npm.pkg.github.com/download/@dust-engine/nuxt-ui-pro-edge/0.4.2-28322051.92289d8/0c34c919d2f1b5115d6cde0b570013611c163ead}
+  /@dust-engine/nuxt-ui-pro-edge@0.4.2-28322130.e7a69ef(vue@3.3.8)(webpack@5.89.0):
+    resolution: {integrity: sha512-vZI2Kq34up2Ew7HjgizoSAdPaNupJwYSCZChHdXwnXCEPOe6W9/4yiBEfOVId0BI/QGCpM5T77lsfs8p5D/PFA==, tarball: https://npm.pkg.github.com/download/@dust-engine/nuxt-ui-pro-edge/0.4.2-28322130.e7a69ef/9ecd53fcbfc490d71e902b9ac972f834ee98ffc8}
     dependencies:
       '@nuxt/ui': /@nuxt/ui-edge@2.10.0-28321529.c601fc6(vue@3.3.8)(webpack@5.89.0)
       '@vueuse/core': 10.5.0(vue@3.3.8)
@@ -1855,7 +1855,7 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@types/estree': 1.0.4
+      '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
       rollup: 3.29.4
@@ -1964,22 +1964,22 @@ packages:
       '@types/ms': 0.7.33
     dev: true
 
-  /@types/eslint-scope@3.7.6:
-    resolution: {integrity: sha512-zfM4ipmxVKWdxtDaJ3MP3pBurDXOCoyjvlpE3u6Qzrmw4BPbfm4/ambIeTk/r/J0iq/+2/xp0Fmt+gFvXJY2PQ==}
+  /@types/eslint-scope@3.7.7:
+    resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
     dependencies:
-      '@types/eslint': 8.44.6
-      '@types/estree': 1.0.4
+      '@types/eslint': 8.44.7
+      '@types/estree': 1.0.5
     dev: true
 
-  /@types/eslint@8.44.6:
-    resolution: {integrity: sha512-P6bY56TVmX8y9J87jHNgQh43h6VVU+6H7oN7hgvivV81K2XY8qJZ5vqPy/HdUoVIelii2kChYVzQanlswPWVFw==}
+  /@types/eslint@8.44.7:
+    resolution: {integrity: sha512-f5ORu2hcBbKei97U73mf+l9t4zTGl74IqZ0GQk4oVea/VS8tQZYkUveSYojk+frraAVYId0V2WC9O4PTNru2FQ==}
     dependencies:
-      '@types/estree': 1.0.4
+      '@types/estree': 1.0.5
       '@types/json-schema': 7.0.14
     dev: true
 
-  /@types/estree@1.0.4:
-    resolution: {integrity: sha512-2JwWnHK9H+wUZNorf2Zr6ves96WHoWDJIftkcxPKsS7Djta6Zu519LarhRNljPXkpsZR2ZMwNCPeW7omW07BJw==}
+  /@types/estree@1.0.5:
+    resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
   /@types/hast@2.3.7:
@@ -3832,7 +3832,7 @@ packages:
   /estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
     dependencies:
-      '@types/estree': 1.0.4
+      '@types/estree': 1.0.5
     dev: true
 
   /etag@1.8.1:
@@ -4818,7 +4818,7 @@ packages:
   /is-reference@1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
     dependencies:
-      '@types/estree': 1.0.4
+      '@types/estree': 1.0.5
     dev: true
 
   /is-regex@1.1.4:
@@ -9224,8 +9224,8 @@ packages:
       webpack-cli:
         optional: true
     dependencies:
-      '@types/eslint-scope': 3.7.6
-      '@types/estree': 1.0.4
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.5
       '@webassemblyjs/ast': 1.11.6
       '@webassemblyjs/wasm-edit': 1.11.6
       '@webassemblyjs/wasm-parser': 1.11.6

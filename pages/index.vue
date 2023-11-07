@@ -28,6 +28,36 @@ ULandingSection(title="What we have now")
         title="Async Render Graph"
         description="A new way to compose render passes and manage render resources."
         icon="@dust:fa6-pro-solid:diagram-project")
+ULandingSection(title="Projects under our care")
+  ULandingGrid
+    ULandingCard.col-span-4.row-span-5(
+        to="https://github.com/dust-engine/dust"
+        title="dust"
+        description="The main repository for Dust Engine."
+        icon="@dust:fa6-pro-duotone:block-question")
+    ULandingCard.col-span-4.row-span-5(
+        to="https://github.com/dust-engine/dot_vox"
+        title="dot_vox"
+        description="A framework to easily create ray tracing pipelines.")
+      template(#icon)
+        img.icon.w-8.h-8.flex-shrink-0(src="https://raw.githubusercontent.com/ephtracy/ephtracy.github.io/55281356d9234a005309c5ab92ff899c67ccd759/favicon.png")
+    ULandingCard.col-span-4.row-span-5(
+        to="https://github.com/dust-engine/playout"
+        title="playout"
+        description="Universal shader makros. Define your bindings once and use them in both shaders and Rust."
+        icon="@dust:fa6-pro-duotone:transformer-bolt"
+        style="--icon-secondary-color: red; --icon-secondary-opacity: 0.6;")
+    ULandingCard.col-span-4.row-span-5(
+        to="https://github.com/dust-engine/nrd-sys"
+        title="nrd-sys"
+        description="Rust FFI for NVIDIA Realtime Denoiser"
+        icon="@dust:fa6-pro-regular:filter")
+    ULandingCard.col-span-4.row-span-5(
+        to="https://github.com/dust-engine/aftermath-rs"
+        title="aftermath-rs"
+        description="NVIDIA Aftermath SDK for Rust")
+      template(#icon)
+        img.icon.w-8.h-8.flex-shrink-0(src="https://developer.download.nvidia.com/images/nvidia-nsight-aftermath-icon.png")
 </template>
 
 

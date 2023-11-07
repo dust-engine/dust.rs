@@ -14,13 +14,14 @@ UContainer
   import type { Link } from '#ui-pro/types'
   import { setResponseHeader } from 'h3'
 
-  const route = useRoute()
+  const route = useRoute();
 
   const { data: page, error: pageError } = await useAsyncData(
-    'post',
+    'post:'+route.params.id,
     () => $fetch(`/api/posts/${route.params.id}`),
-    //{ watch: [route.params.id] }
+    { watch: [route] }
   )
+
   if (pageError.value && pageError.value.statusCode !== 404) {
     throw createError(pageError.value)
   }

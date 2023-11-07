@@ -1,8 +1,14 @@
 <template lang="pug">
 UContainer
   UPage
-    template(#right v-if="page.body?.toc?.links?.length")
+    template(#right)
       UDocsToc(:links="page.body.toc.links")
+        template(#bottom)
+          .hidden.space-y-6(class="lg:block", :class="{ '!mt-6': page.body?.toc?.links?.length }")
+            UDivider(v-if="page.body?.toc?.links?.length" type="dashed")
+            UPageLinks(
+              :links="[{ icon: '@dust:fa6-pro-brands:github', label: 'Discuss on GitHub', to: page.url, target: '_blank' }]"
+            )
     UPageBody(prose)
       ContentRenderer(:value="page")
     template(#left)

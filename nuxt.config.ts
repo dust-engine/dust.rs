@@ -16,6 +16,9 @@ export default defineNuxtConfig({
         '/posts/12',
         '/posts/13',
         '/posts/14',
+        '/api/posts/12',
+        '/api/posts/13',
+        '/api/posts/14',
       ]
     }
   },

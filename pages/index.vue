@@ -5,6 +5,12 @@ ULandingHero(:links="links")
     | A research project trying to push the boundaries of  #[strong voxel] geometry and interactivity.
     br
     | Experimental real-time global illumination renderer powered by Rust, Vulkan and Bevy.
+  div(style="position: relative; padding-top: 56.25%;")
+    iframe(
+      src="https://customer-fzyt5otspjhnktbg.cloudflarestream.com/9e89b7abe6650d45d9064b94221cd22d/iframe?loop=true&poster=https%3A%2F%2Fcustomer-fzyt5otspjhnktbg.cloudflarestream.com%2F9e89b7abe6650d45d9064b94221cd22d%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+      style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+      allowfullscreen="true")
 ULandingSection(title="What We Have Now")
   ULandingGrid
     ULandingCard.col-span-8.row-span-5(

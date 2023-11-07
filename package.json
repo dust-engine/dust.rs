@@ -15,11 +15,6 @@
     "typescript": "^5.2.2",
     "vite-plugin-pug": "^0.3.2"
   },
-  "pnpm": {
-    "overrides": {
-      "nuxt-icon": "0.6.1"
-    }
-  },
   "packageManager": "^pnpm@8.10.2",
   "dependencies": {
     "@nuxtjs/web-vitals": "^0.2.6",

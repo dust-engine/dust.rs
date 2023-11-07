@@ -7,6 +7,14 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui'
   ],
+  content: {
+    highlight: {
+      preload: [
+        'rust',
+        'glsl'
+      ]
+    }
+  },
   runtimeConfig: {
     githubDiscussion: {
       orgName: 'dust-engine',

@@ -9,6 +9,16 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/web-vitals',
   ],
+  nitro: {
+    prerender: {
+      routes: [
+        '/',
+        '/posts/12',
+        '/posts/13',
+        '/posts/14',
+      ]
+    }
+  },
   content: {
     highlight: {
       preload: [

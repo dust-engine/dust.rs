@@ -8,6 +8,9 @@ UHeader
     UColorModeButton
     UButton(to="https://github.com/dust-engine/dust" target="_blank" icon="@dust:fa6-pro-brands:github" color="gray" variant="ghost")
     UButton(to="https://discord.com/invite/7R26SXn8CT" target="_blank" icon="@dust:fa6-pro-brands:discord" color="gray" variant="ghost")
+  template(v-if="$route.path !== '/'" #panel)
+    // LazyUDocsSearchButton
+    LazyUNavigationTree(:multiple="false" :links="links")
 UMain
   slot
 UFooter
@@ -15,6 +18,10 @@ UFooter
     UButton(to="https://github.com/dust-engine/dust" target="_blank" icon="@dust:fa6-pro-brands:github" color="gray" variant="ghost")
     UButton(to="https://discord.com/invite/7R26SXn8CT" target="_blank" icon="@dust:fa6-pro-brands:discord" color="gray" variant="ghost")
 </template>
+
+<script setup lang="ts">
+const links = await useNavTree();
+</script>
 
 <style scoped>
 .header-icon {

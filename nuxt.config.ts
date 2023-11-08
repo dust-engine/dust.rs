@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/web-vitals',
+    '@nuxthq/studio',
   ],
   nitro: {
     prerender: {

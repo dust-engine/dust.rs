@@ -1,5 +1,6 @@
 import { githubRequest } from '~/server/utils/gh_gql';
 import markdownTransformer from '@nuxt/content/transformers/markdown';
+import { StripGithubMarkdownFrontmatter } from '~/server/utils/gh_markdown';
 const GetQuery = (owner: string, repo: string) => `
 query DustGetPostList {
   repository(owner: "${owner}", name: "${repo}") {
@@ -16,6 +17,7 @@ query DustGetPostList {
         createdAt
         updatedAt
         number
+        body
       }
     }
   }
@@ -49,6 +51,19 @@ export default defineEventHandler(async (event) => {
         statusCode: 500,
         message: "Unexpected response"
     });
+  }
+
+  for (const discussion of discussions) {
+    discussion.body = StripGithubMarkdownFrontmatter(discussion.body);
+    const contentId = 'post-' + discussion.number;
+    const parsedBody = await markdownTransformer.parse!(contentId, discussion.body, {});
+    if (parsedBody.description) {
+      discussion.description = parsedBody.description;
+    }
+    if (parsedBody.excerpt) {
+      discussion.excerpt = parsedBody.excerpt;
+    }
+    delete discussion.body;
   }
   return discussions;
 })

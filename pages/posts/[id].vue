@@ -11,6 +11,7 @@ UContainer
             )
     UPageBody(prose)
       ContentRenderer(:value="page")
+      UDocsSurround(:surround="surround")
     template(#left)
       UAside
         UNavigationTree(:links="links" :multiple="false")
@@ -27,7 +28,7 @@ UContainer
   if (pageError.value && pageError.value.statusCode !== 404) {
     throw createError(pageError.value)
   }
-  const { data: list, error: listError } = await useFetch(`/api/posts`)
+  const { data: list, error: listError } = await useFetch<{ id: string, title: string, description: string, number: number }[]>(`/api/posts`);
   if (listError.value) {
     throw createError(listError.value)
   }
@@ -43,5 +44,26 @@ UContainer
   }];
   const event = useRequestEvent();
   event && setResponseHeader(event, 'Cache-Control', 'public, max-age=3600');
+  const surround = computed(() => {
+    let index: number | null = null;
+    for (let i = 0; i < list.value.length; i++) {
+      const item = list.value[i];
+      if (item.id === page.value.id) {
+        index = i;
+      }
+    }
+    if (index === null) {
+      return null;
+    }
+    let prev: any = index > 0 ? list.value[index - 1] : null;
+    let next: any = (index < (list.value.length - 1)) ? list.value[index + 1] : null;
+    if (prev) {
+      prev._path = '/posts/' + prev.number;
+    }
+    if (next) {
+      next._path = '/posts/' + next.number;
+    }
+    return [prev, next];
+  });
 </script>
 

@@ -1,21 +1,23 @@
 <template>
   <svg
     v-if="iconData"
+    :width="iconData.attributes.width"
+    :height="iconData.attributes.height"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     aria-hidden="true"
     class="icon"
     role="img"
-    :viewBox="`0 0 ${iconData.width} ${iconData.height}`"
+    :viewBox="iconData.attributes.viewBox"
     v-html="iconData.body"
   >
   </svg>
-  <div v-else>
-    {{ name }}
-  </div>
 </template>
 
 <script setup lang="ts">
+import { iconToSVG } from '@iconify/utils/lib/svg/build';
+import type { IconifyJSON, IconifyIcon } from '@iconify/types';
+
 const props = defineProps<{
   name: string
 }>()
@@ -47,12 +49,14 @@ const { data: iconData } = await useAsyncData(props.name, async () => {
     const url = `https://${host}/${iconInfo.set}.json?icons=${iconInfo.name}`
 
 
-    const data: any  = await $fetch(url);
-    const iconData: { body: string, width: number, height: number } = data.icons[iconInfo.name];
+    const data = await $fetch<IconifyJSON>(url);
+    const iconData: IconifyIcon = data.icons[iconInfo.name];
 
     iconData.width = iconData.width || data.width;
     iconData.height = iconData.height || data.height;
-    return iconData;
+    iconData.top = iconData.top || data.top || 0;
+    iconData.left = iconData.left || data.left || 0;
+    return iconToSVG(iconData);
 }, {
     watch: [props]
 });

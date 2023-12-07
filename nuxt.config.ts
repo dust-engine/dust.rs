@@ -3,12 +3,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['@nuxt/ui-pro'],
   typescript: { strict: false },
-  css: ['~/assets/global.css'],
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxthq/studio',
   ],
+  components: {
+    global: true,
+    dirs: ['~/override-components', '~/components'],
+  },
   nitro: {
     prerender: {
       routes: [

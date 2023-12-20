@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxthq/studio',
+    '@nuxtjs/plausible',
   ],
   components: {
     global: true,
@@ -40,5 +41,8 @@ export default defineNuxtConfig({
       appId: 418822,
       key: ''
     }
-  }
+  },
+  plausible: {
+    apiHost: 'https://analytics.dust.rs',
+  },
 })
